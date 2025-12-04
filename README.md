@@ -24,17 +24,17 @@ This agent is designed for internal use within organizations that use Outlook as
 
 ## 📁 Project Structure
 
-birthday-agent/
-│
-├── birthday_agent.py # Main script
-├── template.html # HTML template for email body
-├── birthdays.xlsx # Excel file containing user data
-├── requirements.txt # Gives the details about required python packages
-├── assets/
-│ ├── birthday_bg.jpg # Background image (converted to base64)
-│ └── confetti.png # Overlays and icons
-│
-└── README.md # Documentation
+    birthday-agent/
+    │
+    ├── birthday_agent.py # Main script
+    ├── template.html # HTML template for email body
+    ├── birthdays.xlsx # Excel file containing user data
+    ├── requirements.txt # Gives the details about required python packages
+    ├── assets/
+    │ ├── birthday_bg.jpg # Background image (converted to base64)
+    │ └── confetti.png # Overlays and icons
+    │
+    └── README.md # Documentation
 
 
 ---
@@ -60,3 +60,11 @@ Dates must be in **YYYY-MM-DD** format.
 - Libraries:
   ```bash
   pip install pandas pywin32 python-dateutil
+
+## 📧 How It Works
+
+  1. Script loads the Excel file
+  2. Compares today's date with each birthday
+  3. Sends personalized HTML email using Outlook
+  4. Logs last execution (to avoid duplicate sends)
+  5. Exits
